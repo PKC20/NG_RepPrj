@@ -1,9 +1,9 @@
 pipeline {
     agent any 
     stages {
-        stage('Static Analysis') {
+        stage('Code Analysis') {
             steps {
-                echo 'Run the static analysis to the code' 
+                echo 'Please do code Analysis' 
             }
         }
         stage('Compile') {
@@ -13,22 +13,22 @@ pipeline {
         }
         stage('Security Check') {
             steps {
-                echo 'Run the security check against the application' 
+                echo 'Running Security check on Application' 
             }
         }
         stage('Run Unit Tests') {
             steps {
-                echo 'Run unit tests from the source code' 
+                echo 'Run the unit Test on code' 
             }
         }
         stage('Run Integration Tests') {
             steps {
-                echo 'Run only crucial integration tests from the source code' 
+                echo 'Run Integration test on code' 
             }
         }
         stage('Publish Artifacts') {
             steps {
-                echo 'Save the assemblies generated from the compilation' 
+                echo 'Save artifacts from the compilation' 
             }
         }
     }
